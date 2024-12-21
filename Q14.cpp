@@ -71,12 +71,6 @@
 
 
 
-
-
-
-
-
-
 // 3. Moderate Approach (Using Vectors)
 // #include <iostream>
 // #include <vector>
@@ -92,6 +86,35 @@
 
 // int main() {
 //     vector<int> nums = {1, 2, 3, 4};
+//     int newElement = 0;  
+//     addElementToBeginning(nums, newElement);
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+// 4. Optimal Approach (Using Deque)
+// #include <iostream>
+// #include <deque>
+// using namespace std;
+// void addElementToBeginning(deque<int>& nums, int newElement) {
+//     nums.push_front(newElement);  
+//     cout << "Updated array: ";
+//     for (int num : nums) {
+//         cout << num << " ";
+//     }
+//     cout << endl;
+// }
+
+// int main() {
+//     deque<int> nums = {1, 2, 3, 4};  
 //     int newElement = 0;  
 //     addElementToBeginning(nums, newElement);
 
