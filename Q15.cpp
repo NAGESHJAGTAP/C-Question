@@ -28,24 +28,56 @@
 
 
 // Approach 2: Easy Approach (In-place Shifting of Elements)
-#include <iostream>
-using namespace std;
-void removeLastElementEasy(int arr[], int &size) {
-    if (size > 0) {
-        for (int i = 0; i < size - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-        size--;  
-    }
-}
-int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    removeLastElementEasy(arr, size);  
-    for (int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+// #include <iostream>
+// using namespace std;
+// void removeLastElementEasy(int arr[], int &size) {
+//     if (size > 0) {
+//         for (int i = 0; i < size - 1; i++) {
+//             arr[i] = arr[i + 1];
+//         }
+//         size--;  
+//     }
+// }
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     removeLastElementEasy(arr, size);  
+//     for (int i = 0; i < size; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+// Approach 3: Moderate Approach (Using a Temporary Variable)
+// #include <iostream>
+// using namespace std;
+// void removeLastElementModerate(int arr[], int &size) {
+//     if (size > 0) {
+//         int lastElement = arr[size - 1]; 
+//         arr[size - 1] = 0; 
+//         size--; 
+//     }
+// }
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     removeLastElementModerate(arr, size);  
+//     for (int i = 0; i < size; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
