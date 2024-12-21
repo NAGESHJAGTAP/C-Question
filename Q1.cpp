@@ -1,9 +1,7 @@
 // 1. C++ Code to Check Grade Based on Score. This C++ program determines the grade of a student based on their score.
 #include<iostream>
 #include<string>
-
 using namespace std;
-
 string checkGrade(int score) {
     if (score >= 90 && score <= 100) {
         return "A"; 
@@ -21,13 +19,9 @@ string checkGrade(int score) {
 }
 int main() {
     int score;
- 
     cout << "Enter the student's score (0-100): ";
     cin >> score;
-
- 
     string grade = checkGrade(score);
-    cout << "The student's grade is: " << grade << std::endl;
-
+    cout << "The student's grade is: " << grade << endl;
     return 0;
 }
