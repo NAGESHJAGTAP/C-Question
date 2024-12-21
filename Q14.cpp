@@ -1,5 +1,6 @@
 // 14. Add Element to the Beginning of an Array Example: Input: nums = [1, 2, 3, 4]; Output: nums = [0,1,2,3,4].
 
+// 1. Brute Force Approach (Fixed-Size Arrays)
 #include <iostream>
 using namespace std;
 void addElementToBeginning(int arr[], int size, int newElement) {
@@ -21,5 +22,46 @@ int main() {
     int size = sizeof(nums) / sizeof(nums[0]);
     int newElement = 0; 
     addElementToBeginning(nums, size, newElement);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2. Easy Approach (In-Place Shifting in Fixed-Size Array)
+#include <iostream>
+using namespace std;
+void addElementToBeginning(int arr[], int& size, int newElement) {
+    for (int i = size; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = newElement;  
+    size++;  
+    cout << "Updated array: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int nums[10] = {1, 2, 3, 4};  
+    int size = 4;  
+    int newElement = 0;  
+
+    addElementToBeginning(nums, size, newElement);
+
     return 0;
 }
