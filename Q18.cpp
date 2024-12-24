@@ -88,28 +88,28 @@
 
 
 // Approach 4: Using Temporary Array
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void printEvenIndexWithTempArray(int arr[], int size) {
-    int temp[size];  
-    int tempIndex = 0;
+// void printEvenIndexWithTempArray(int arr[], int size) {
+//     int temp[size];  
+//     int tempIndex = 0;
 
-    for (int i = 0; i < size; i += 2) { 
-        temp[tempIndex++] = arr[i];  
-    }
-    cout << "[";
-    for (int i = 0; i < tempIndex; i++) {
-        cout << temp[i];
-        if (i < tempIndex - 1) { 
-            cout << ", ";
-        }
-    }
-    cout << "]" << endl;
-}
-int main() {
-    int arr[] = {10, 20, 30, 40, 50};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    printEvenIndexWithTempArray(arr, size);
-    return 0;
-}
+//     for (int i = 0; i < size; i += 2) { 
+//         temp[tempIndex++] = arr[i];  
+//     }
+//     cout << "[";
+//     for (int i = 0; i < tempIndex; i++) {
+//         cout << temp[i];
+//         if (i < tempIndex - 1) { 
+//             cout << ", ";
+//         }
+//     }
+//     cout << "]" << endl;
+// }
+// int main() {
+//     int arr[] = {10, 20, 30, 40, 50};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     printEvenIndexWithTempArray(arr, size);
+//     return 0;
+// }
