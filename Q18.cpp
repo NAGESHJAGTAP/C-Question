@@ -2,24 +2,56 @@
 
 // Approach 1: Brute Force
 
+// #include <iostream>
+// using namespace std;
+// void printEvenIndexBruteForce(int arr[], int size) {
+// cout << "[";
+// for (int i = 0; i < size; i++) { 
+// if (i % 2 == 0) {           
+// cout << arr[i];         
+//  if (i < size - 2) {    
+//  cout << ", ";
+//  }
+//  }
+// }
+// cout << "]" << endl;
+// }
+// int main() {
+//  int arr[] = {10, 20, 30, 40, 50};
+//  int size = sizeof(arr) / sizeof(arr[0]);
+//  printEvenIndexBruteForce(arr, size);
+//  return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Approach 2: Moderate (Skip Odd Indexes)
 #include <iostream>
 using namespace std;
-void printEvenIndexBruteForce(int arr[], int size) {
-cout << "[";
-for (int i = 0; i < size; i++) { 
-if (i % 2 == 0) {           
-cout << arr[i];         
- if (i < size - 2) {    
- cout << ", ";
- }
- }
-}
-cout << "]" << endl;
+void printEvenIndexModerate(int arr[], int size) {
+    cout << "[";
+    for (int i = 0; i < size; i += 2) { 
+        cout << arr[i];                 
+        if (i < size - 2) {             
+            cout << ", ";
+        }
+    }
+    cout << "]" << endl;
 }
 
 int main() {
- int arr[] = {10, 20, 30, 40, 50};
- int size = sizeof(arr) / sizeof(arr[0]);
- printEvenIndexBruteForce(arr, size);
- return 0;
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printEvenIndexModerate(arr, size);
+    return 0;
 }
