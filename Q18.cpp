@@ -24,7 +24,29 @@
 // }
 
 
+// Approach 3: Recursive Solution
 
+#include <iostream>
+using namespace std;
+
+void printEvenIndexRecursive(int arr[], int size, int index = 0) {
+    if (index >= size) { 
+    return;
+    }
+    cout << arr[index];  
+    if (index + 2 < size) { 
+    cout << ", ";
+    }
+    printEvenIndexRecursive(arr, size, index + 2); 
+}
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    cout << "[";
+    printEvenIndexRecursive(arr, size);
+    cout << "]" << endl;
+    return 0;
+}
 
 
 
