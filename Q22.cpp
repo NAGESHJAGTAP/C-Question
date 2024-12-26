@@ -24,14 +24,36 @@
 
 // Approach 2: Using size() or length() Method (Easy)
 
-# include <iostream>
-# include <string>
+// # include <iostream>
+// # include <string>
+// using namespace std;
+// int findlength(string str){
+//   return str.length();
+// }
+// int main(){
+//     string input="hello world!";
+//     cout << findlength(input) << endl;
+//     return 0;
+// }
+
+
+
+
+// Approach 3: Using a Pointer (Moderate)
+#include <iostream>
 using namespace std;
-int findlength(string str){
-  return str.length();
+
+int findLengthPointer(string str) {
+    const char* ptr = str.c_str(); 
+    int count = 0;
+    while (*ptr != '\0') { 
+        count++; 
+        ptr++; 
+    }
+    return count;
 }
-int main(){
-    string input="hello world!";
-    cout << findlength(input) << endl;
+int main() {
+    string inputString = "Hello, World!";
+    cout << "Length (Using Pointer): " << findLengthPointer(inputString) << endl;
     return 0;
 }
