@@ -40,20 +40,38 @@
 
 
 // Approach 3: Using a Pointer (Moderate)
+// #include <iostream>
+// using namespace std;
+
+// int findLengthPointer(string str) {
+//     const char* ptr = str.c_str(); 
+//     int count = 0;
+//     while (*ptr != '\0') { 
+//         count++; 
+//         ptr++; 
+//     }
+//     return count;
+// }
+// int main() {
+//     string inputString = "Hello, World!";
+//     cout << "Length (Using Pointer): " << findLengthPointer(inputString) << endl;
+//     return 0;
+// }
+
+
+
+
+// Approach 4: Using std::distance with Iterators (Optimal)
+
 #include <iostream>
+#include <iterator> 
 using namespace std;
 
-int findLengthPointer(string str) {
-    const char* ptr = str.c_str(); 
-    int count = 0;
-    while (*ptr != '\0') { 
-        count++; 
-        ptr++; 
-    }
-    return count;
+int findLengthIterators(string str) {
+    return distance(str.begin(), str.end()); 
 }
 int main() {
     string inputString = "Hello, World!";
-    cout << "Length (Using Pointer): " << findLengthPointer(inputString) << endl;
+    cout << "Length (Using Iterators): " << findLengthIterators(inputString) << endl;
     return 0;
 }
