@@ -23,5 +23,27 @@
 
 
 
+// Approach 2: Using the toupper() Function (Easy)
+
+// #include <iostream>
+// #include <cctype> 
+// using namespace std;
+// string toUpperCaseToupper(string str) {
+//     for (int i = 0; i < str.length(); i++) {
+//         str[i] = toupper(str[i]);
+//     }
+//     return str; 
+// }
+// int main() {
+//     string input = "hello";
+//     cout << "Uppercase (Using toupper): " << toUpperCaseToupper(input) << endl;
+//     return 0;
+// }
+
+
+
+
+
+
 
 
