@@ -29,7 +29,6 @@
 
 
 
-
 // 2. Moderate Approach (Single Loop)
 // #include <iostream>
 // using namespace std;
@@ -59,30 +58,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // 3. Optimal Approach (Built-in Functions)
 
-#include <iostream>
-#include <algorithm> 
-using namespace std;
-int findDifferenceBuiltIn(int arr[], int size) {
-    int maxElement = *max_element(arr, arr + size); 
-    int minElement = *min_element(arr, arr + size);
-    return maxElement - minElement;
-}
-
-int main() {
-    int arr[] = {80, 30, 70, 50, 20};
-    int size = sizeof(arr) / sizeof(arr[0]); 
-    cout << "Difference (Built-in): " << findDifferenceBuiltIn(arr, size) << endl;
-    return 0;
-}
+// #include <iostream>
+// #include <algorithm> 
+// using namespace std;
+// int findDifferenceBuiltIn(int arr[], int size) {
+//     int maxElement = *max_element(arr, arr + size); 
+//     int minElement = *min_element(arr, arr + size);
+//     return maxElement - minElement;
+// }
+// int main() {
+//     int arr[] = {80, 30, 70, 50, 20};
+//     int size = sizeof(arr) / sizeof(arr[0]); 
+//     cout << "Difference (Built-in): " << findDifferenceBuiltIn(arr, size) << endl;
+//     return 0;
+// }
