@@ -32,15 +32,33 @@
 
 
 // Approach 3: Using append() Method (Moderate)
+// #include <iostream>
+// using namespace std;
+// string concatenateWithAppend(string str1, string str2) {
+//     str1.append(str2); 
+//     return str1; 
+// }
+// int main() {
+//     string str1 = "hello";
+//     string str2 = " world";
+//     cout << "Concatenated String (Using append()): " << concatenateWithAppend(str1, str2) << endl;
+//     return 0;
+// }
+
+
+
+// Approach 4: Using strcat() (Optimal in C-Style)
+
 #include <iostream>
+#include <cstring> 
 using namespace std;
-string concatenateWithAppend(string str1, string str2) {
-    str1.append(str2); 
-    return str1; 
+void concatenateWithStrcat(char* str1, const char* str2) {
+    strcat(str1, str2); 
 }
 int main() {
-    string str1 = "hello";
-    string str2 = " world";
-    cout << "Concatenated String (Using append()): " << concatenateWithAppend(str1, str2) << endl;
+    char str1[50] = "hello";  
+    const char* str2 = " world"; 
+    concatenateWithStrcat(str1, str2);
+    cout << "Concatenated String (Using strcat()): " << str1 << endl;
     return 0;
 }
