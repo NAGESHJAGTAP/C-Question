@@ -46,21 +46,38 @@
 
 // Approach 3: Using STL Transform Function (Moderate)
 
+// #include <iostream>
+// #include <algorithm> 
+// #include <cctype>   
+// using namespace std;
+// string toUpperCase(string str) {
+//     transform(str.begin(), str.end(), str.begin(), ::toupper);
+//     return str; 
+// }
+// int main() {
+//     string input = "hello";
+//     cout << toUpperCase(input) << endl;
+//     return 0;
+// }
+
+
+
+
+// Approach 4: Using STL Locale with Transform (Optimal)
 #include <iostream>
-#include <algorithm> 
-#include <cctype>   
+#include <algorithm>
+#include <locale> 
 using namespace std;
-string toUpperCase(string str) {
-    transform(str.begin(), str.end(), str.begin(), ::toupper);
+string toUpperCaseLocale(string str) {
+    locale loc; 
+    transform(str.begin(), str.end(), str.begin(), [&loc](char c) { return toupper(c, loc); });
     return str; 
 }
 int main() {
     string input = "hello";
-    cout << toUpperCase(input) << endl;
+    cout << "Uppercase (Using locale): " << toUpperCaseLocale(input) << endl;
     return 0;
 }
-
-
 
 
 
